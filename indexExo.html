@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<title>Champignons</title>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="champignon amanite cèpe">
+		<link rel="stylesheet" type="text/css" href="champi.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="js/champi2.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Champignons</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">Accueil</a></li>
+					<li><a href="recettes.html">Recettes</a></li>
+					<li><a href="recettes.html">Rubrique 1</a></li>
+					<li><a href="recettes.html">Rubrique 2</a></li>
+					<li><a href="recettes.html">Rubrique 3</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section id="sectionPhotoMain">
+				<img id="imgChampiMain" 
+					src="https://www.sante-sur-le-net.com/wp-content/uploads/2017/09/mooc-et-champignons.jpg"
+					alt="Amanite tue mouche">
+			</section>
+			<section id="sectionPresentation">
+				Ouf j'aime pas les <span class="champiWord">champignons</span>
+			</section>
+			<section id="sectionListe">
+			<h2>Liste complète (<span id="nb"></span>)</h2>
+				<ul>
+					<li>Comestibles
+						<ul class="comestible">
+						
+						</ul>
+					</li>
+					<li>Non comestibles
+						<ul class="noncomestible">
+					
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<form method="post">
+				<div>
+					<label for="nom">nom</label>
+					<input name="nom" id="nom" type="text" 
+						required  pattern="[\wéèê]{3,}">
+				</div>
+				<div>
+					comestible:
+					<label for="comestible_oui">oui</label>
+					<input name="comestible" id="comestible_oui" type="radio" value="true">
+					<label for="comestible_non">non</label>
+					<input name="comestible" id="comestible_non" type="radio" value="false" checked>
+				</div>
+				<div>
+					<label for="vitamine">taux vitamine C</label>
+					<input name="vitamine" id="vitamine" type="number"
+						min="0" max="1" step="0.1">
+				</div>
+				<div><input name="submit" type="submit" value="Ajouter"></div>
+			</form>
+			</section>
+			<section id="sectionTrombi">
+				<img class="champitrombi" src="images/noncomestible/amanite.jpg" alt="amanite phaloïde">
+				<img class="champitrombi" src="images/comestible/cepe.jpg" alt="cèpe">
+				<img class="champitrombi" src="images/comestible/trompette.jpg" alt="trompette de la mort">
+			</section>
+			<aside>
+				<div>
+				<h2>Mes préférés</h2>
+				<ul>
+					<li>Cèpe</li>
+					<li>Amanite tue mouche</li>
+				</ul>
+				</div>
+			</aside>
+		</main>
+		<footer>pour les amateurs de champignons, novembre 2019.
+		</footer>
+	</body>
+</html>

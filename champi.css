@@ -1,0 +1,135 @@
+body {
+	background-color: #9dd09d;
+	color: #6f570d;
+	font-family: calibri, sans-serif;
+}
+
+footer {
+	background-color: #e9f5e9;
+	font-size: 0.5em;
+}
+
+section, aside {
+	background-color: #87e1f1;	
+}
+
+h1 {
+	color: hotpink;
+	background-color: wheat;
+	font-size: 2.5em;
+}
+
+h2 {
+	font-size: 1.3em;
+	color: #ff9800;
+}
+
+aside h2 {
+	color: #673ab7;
+}
+
+img {
+	height: 200px;
+}
+
+img.champitrombi {
+	height: 100px;
+	border-style: solid;
+	border-width: 2px;
+}
+
+/* img#imgChampiMain */
+#imgChampiMain {
+	height: 250px;
+}
+
+img[src^="images/comestible/"] {
+	border-color: green;		
+}
+
+img[src^="images/noncomestible/"]{
+	border-color: red;
+}
+
+
+
+/* img[src*="cepe"] {
+	margin: 5px;
+} */
+
+
+span.champiWord {
+	font-weight: 700;
+    font-style: italic;
+}
+
+li { 
+	color: red;
+}
+
+li li {
+	color: #225624;
+}
+
+/* li li:nth-child(odd) { */
+li li:nth-child(2n+1) {
+	background-color: yellow;
+}
+
+/* li li:nth-child(even) { */
+li li:nth-child(2n) {
+	background-color: cyan;
+}
+
+li li:hover {
+	color: #F44336;
+    font-weight: bold;
+}
+
+
+/* li li:nth-child(3n) {
+	color: #E91E63;
+}
+ */
+ 
+a, a:visited {
+	text-decoration: none;
+	color: #025698;
+	background-color: #8bc34a;
+}
+
+a:hover {
+	background-color: green;
+	color: cyan;
+}
+	
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+nav li {
+	display: inline-flex;
+	flex: 1 1 auto;
+}
+
+@media screen and (max-width: 450px) {
+	nav ul {
+		flex-direction: column;
+		padding-left: 0;
+	} 
+	
+	nav li {
+		flex-basis: 100%;
+		border: solid 1px;
+		text-align: center;
+	}
+	
+	nav a {
+		flex-basis: 100%
+	}
+}
+
+
