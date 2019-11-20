@@ -13,10 +13,30 @@ function compterAfficherNbChampi() {
 }
 
 function afficherChampis() {
-	
+	for (let champi of champis) {
+		if (champi.comestible) {
+			$(".comestible").append(`<li>${champi.nom}</li>`)
+		} else {
+			$(".noncomestible").append(`<li>${champi.nom}</li>`)
+		}
+	}
+}
+
+function ajouterChampi() {
+	console.log("ajout champi")
+	let champi = {
+	    nom: $("#nom").val(),
+	    comestible: $("comestible_oui").is(":checked"),
+	    taux: parseFloat($("#vitamine").val())
+	}
+	champis.push(champi)
 }
 
 $(window).on('load', function() {
 	compterAfficherNbChampi()
 	afficherChampis()
+	$("#champiForm").submit(function(event) {
+		event.preventDefault()
+		ajouterChampi()
+	})
 })
